@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+  @apply bg-bg text-slate-800;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  /* 柔和渐变背景，营造轻盈清新的学习氛围 */
+  background: linear-gradient(165deg, #f3f4fb 0%, #eaf3f2 55%, #fdf3f6 100%);
+  background-attachment: fixed;
+}
+
+/* 卡片统一圆角与柔和阴影，视觉更现代 */
+.card {
+  @apply bg-card rounded-2xl shadow-[0_2px_14px_rgba(99,102,241,0.06)] border border-slate-100;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+/* 底部安全区适配 */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
